@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Lunchbox React Kata
+# Lunchbox React Kata
 
 This kata will build your skill with the following in the React framework:
 
@@ -10,7 +10,7 @@ This kata will build your skill with the following in the React framework:
 * Acceptance Test Driven Development
 * Unit Test Driven Development
 
-Instructions
+## Instructions
 
 When you complete this kata, you will have completed the following:
 
@@ -24,9 +24,9 @@ When you complete this kata, you will have completed the following:
 * Create a single view UI
 * Test drive the complete FizzBuzz logic
 
-Development Environment
-React Project Setup
-Unit Testing with Jest
-Acceptance Testing with Detox (and a fake server)
-Creating a View
-The Magical Wonder of FizzBuzz
+### Development Environment
+### React Project Setup
+### Unit Testing with Jest
+### Acceptance Testing with Detox (and a fake server)
+### Creating a View
+### The Magical Wonder of FizzBuzz
