@@ -10,7 +10,7 @@ it('renders without crashing', () => {
 });
 
 describe('FizzBuzz', () => {
-    it('should have a FizzBuzz', () => {
+    it('should have a FizzBuzz button', () => {
         let wrapper = shallow(<App />);
         expect(wrapper.find('button').text()).toEqual('FizzBuzz');
     });

@@ -57,7 +57,12 @@ When you complete this kata, you will have completed the following:
 
 Note that, out of the box, yarn+watchman will watch for changes to your project and re-run
 tests around changed code.  You can also instruct it to re-run all tests by type 'a' in
-the terminal window where you ran 'yarn test'
+the terminal window where you ran 'yarn test.'
+
+Also note that you will probably have to do 'npm run eject' to do custom configurations
+of Jest, such as specifying a setup file to be run before tests.  It's not scary, though.
+Just make sure to do a 'yarn install' afterward so it'll install the millions of 
+dependencies you were getting for free before.
 
 ### Acceptance Testing with Detox (and a fake server)
 stuff
