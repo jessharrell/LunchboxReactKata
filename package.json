@@ -50,11 +50,15 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
+    "testPathIgnorePatterns": [
+      "/e2e"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "./jestSetup.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
@@ -92,6 +96,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "enzyme": "^3.3.0"
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1"
   }
 }
