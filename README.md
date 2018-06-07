@@ -25,6 +25,10 @@ When you complete this kata, you will have completed the following:
 * Test drive the complete FizzBuzz logic
 
 ### Development Environment
+[Installing Node.js with NVM]: https://gist.github.com/d2s/372b5943bce17b964a79
+[Installing yarn package management etc]: https://yarnpkg.com/lang/en/docs/install/#mac-stable
+[Installing detox for acceptance tests]: https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md
+
 1. Install homebrew if you don’t have it from:  https://brew.sh/
 2. brew update
 3. brew install|upgrade nvm
@@ -40,6 +44,7 @@ When you complete this kata, you will have completed the following:
 
 
 ### React Project Setup
+[Brief React Installation Instructions]: https://reactjs.org/docs/add-react-to-a-new-app.html
 1. create-react-app my-app
 2. yarn global add create-react-app
 3. npm install -g npm
@@ -71,4 +76,25 @@ Here are the rules:
     * If it is divisible by both, return or display FizzBuzz
     * Otherwise, just return the display the input number
     
-But wait!
+But wait!  Don't just fixate on a bunch of if-elseif-else stuff.  In interviews,
+FizzBuzz can be an opportunity to show your technical depth.  How would you
+thin slice this problem?  Is there more than one way?  How would you test
+drive it?  What kinds of tests give you the best value?
+
+And, for the implementation itself, what happens if you can't use if blocks?
+Does the implementation language give you other structures you can use?
+What happens if a number is divisible by both 3 and 5?  Is there any point
+in checking for 3 and 5 individually?  
+
+How could you write the code in an
+OO style?  A functional style?  Could you write code that would do the
+evaluation using only binary logic operators?  What if you need to evaluate
+billions of numbers really fast in a stream?  How could you parallelize the
+operation?  Does knowing the answer to one number make it easier to find
+the answer for another?  What are the characteristics of your function?
+Does it run in constant time?  Why or why not?
+
+The point is that there's a wealth of opportunities to explore the whole of 
+computer science, even with such a simple program.  So enjoy doing this
+implementation and let it fill your mind with ideas.
+
