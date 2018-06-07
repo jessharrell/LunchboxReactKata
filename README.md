@@ -55,11 +55,18 @@ When you complete this kata, you will have completed the following:
 ### Unit Testing with Jest
 [Testing React with Jest]: https://facebook.github.io/jest/docs/en/tutorial-react.html
 
+Note that, out of the box, yarn+watchman will watch for changes to your project and re-run
+tests around changed code.  You can also instruct it to re-run all tests by type 'a' in
+the terminal window where you ran 'yarn test'
+
 ### Acceptance Testing with Detox (and a fake server)
 stuff
 
 ### Working with a View
-Your starting place will be App.js
+For this app, you can do all your work App.js.  It will be your single view in the app.
+
+Notice that it is a class that extends Component and, like every Component, it has a render
+method.  You can add other methods to it to retrieve data, do calculations, etc.
 
 ### The Magical Wonder of FizzBuzz
 FizzBuzz is a deceptively simple programming problem used by countless
