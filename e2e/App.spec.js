@@ -22,10 +22,13 @@ afterAll(() => {
 });
 
 describe("App", () => {
-    test("Should display a button", async () => {
+    beforeEach(async () => {
         await page.goto(app);
         await page.waitForSelector("button");
-        // await page.click("input[name=name]");
-        // await page.type("input[name=name]", lead.name);
+    }, 16000);
+
+    test("should display a button with FizzBuzz in the text", async () => {
+        const buttonText = await page.$eval("button", el => el.textContent);
+        expect(buttonText).toEqual("FizzBuzz");
     }, 16000);
 });
