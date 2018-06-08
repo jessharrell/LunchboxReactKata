@@ -50,9 +50,6 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
-    "testPathIgnorePatterns": [
-      "/e2e"
-    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
     ],
@@ -62,7 +59,8 @@
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}",
+      "<rootDir>/e2e/**/?(*.)(spec).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
@@ -97,6 +95,8 @@
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1"
+    "enzyme-adapter-react-16": "^1.1.1",
+    "faker": "^4.1.0",
+    "puppeteer": "^1.5.0"
   }
 }
