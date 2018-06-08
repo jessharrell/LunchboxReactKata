@@ -31,4 +31,10 @@ describe("App", () => {
         const buttonText = await page.$eval("button", el => el.textContent);
         expect(buttonText).toEqual("FizzBuzz");
     }, 16000);
+
+    test("should add div with Fizz when button is clicked", async () => {
+        await page.click("button");
+        const fizzText = await page.$eval(".fizzbuzz", el => el.textContent);
+        expect(fizzText).toEqual("Fizz");
+    });
 });
