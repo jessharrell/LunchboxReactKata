@@ -5,10 +5,6 @@ const spawn = require('child_process').spawn;
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-let testStatus = 0;
-function markTestFailed(){
-    testStatus = 1;
-}
 
 function startServer() {
     const server = spawn('npm', ['start']);
@@ -22,7 +18,6 @@ function startTests() {
         console.log(data.toString());
     });
     tests.stderr.on('data', function(data) {
-        markTestFailed();
         console.log(data.toString());
     });
     return tests;
@@ -33,10 +28,10 @@ function setServerToDieWhenTestsComplete(server, tests) {
         kill(server.pid);
     };
 
-    tests.on('close', () => {
+    tests.on('close', (code) => {
         killServer();
         console.log("tests ran now exit based on tests status");
-        process.exit(testStatus);
+        process.exit(code);
     });
     tests.on('error', () => {
         killServer();
