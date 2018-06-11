@@ -29,6 +29,7 @@ class App extends Component {
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
                 <div className="fizzbuzz">{this.state.isToggleOn ? 'Fizz' : ''}</div>
+                <div className="fizzbuzz">{this.state.isToggleOn ? 'Fuzz' : ''}</div>
             </div>
         );
     }
