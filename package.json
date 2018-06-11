@@ -46,6 +46,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "start:ci": "node scripts/start.js --no-browser",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "test:ci": "jest --env=jsdom",

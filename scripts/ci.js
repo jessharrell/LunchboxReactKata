@@ -7,7 +7,7 @@ function sleep(ms) {
 }
 
 function startServer() {
-    const server = spawn('npm', ['start']);
+    const server = spawn('npm', ['run', 'start:ci']);
     return server;
 }
 
@@ -30,7 +30,6 @@ function setServerToDieWhenTestsComplete(server, tests) {
 
     tests.on('close', (code) => {
         killServer();
-        console.log("tests ran now exit based on tests status");
         process.exit(code);
     });
     tests.on('error', () => {
