@@ -50,7 +50,7 @@
     "start:ci": "node scripts/start.js --no-browser",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "test:ci": "node_module/jest/bin/jest.js --env=jsdom",
+    "test:ci": "node_modules/jest/bin/jest.js --env=jsdom",
     "ci": "node scripts/ci.js"
   },
   "jest": {
