@@ -98,6 +98,7 @@ choosePort(HOST, DEFAULT_PORT)
             console.log(chalk.cyan('Starting the development server...\n'));
 
             if (shouldOpenBrowser) {
+                console.log("opening browser")
                 openBrowser(urls.localUrlForBrowser);
             }
         });

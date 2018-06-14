@@ -1,13 +1,15 @@
 const kill = require('tree-kill');
 const spawn = require('child_process').spawn;
-// const await = require('await');
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function startServer() {
-    const server = spawn('npm', ['run', 'start:ci']);
+    const server =spawn('npm', ['run', 'start:ci']);
+    server.stdout.on('data', function(data) {
+        console.log(data.toString());
+    });
     return server;
 }
 
@@ -42,4 +44,4 @@ const server = startServer();
 sleep(10000).then(() => {
     const tests = startTests();
     setServerToDieWhenTestsComplete(server, tests);
-})
+});
