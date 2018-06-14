@@ -42,7 +42,8 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 var args = process.argv.slice(2);
 
 let shouldOpenBrowser = true;
-if (args.contains("--no-browser")){
+console.log(args);
+if (args.includes("--no-browser")){
     shouldOpenBrowser = false;
 }
 

@@ -32,7 +32,7 @@ RUN groupadd -r puppetuser && useradd -r -g puppetuser -G audio,video puppetuser
 
 WORKDIR /home/puppetuser
 ## Install puppeteer so it's available in the container.
-RUN npm i puppeteer@^1.5.0
+RUN npm i puppeteer@^1.5.0 tree-kill child_process
 
 RUN chown -R puppetuser:puppetuser /home/puppetuser \
     && chown -R puppetuser:puppetuser node_modules
@@ -40,5 +40,6 @@ RUN chown -R puppetuser:puppetuser /home/puppetuser \
 USER puppetuser
 # Run everything after as non-privileged user
 
+EXPOSE 3000
 ENTRYPOINT ["dumb-init", "--"]
 CMD ["google-chrome-unstable"]
